@@ -56,15 +56,5 @@ export class NftMarketplace {
       sendMode: SendMode.IGNORE_ERRORS + SendMode.PAY_GAS_SEPARATELY,
     });
     return seqno;
-
-    
   }
-
-  console.log("Start deploy of new marketplace  ");
-const marketplace = new NftMarketplace(wallet.contract.address);
-seqno = await marketplace.deploy(wallet);
-await waitSeqno(seqno, wallet);
-console.log("Successfully deployed new marketplace");
-
-  
 }
