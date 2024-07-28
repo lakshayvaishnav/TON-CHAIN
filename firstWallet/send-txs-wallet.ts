@@ -47,6 +47,8 @@ async function main() {
     currentseqno = await walletcontract.getSeqno();
   }
   console.log("transaction confirmed... 👍🏻");
+
+  console.log("check the wallet for your new nft");
 }
 
 main();
