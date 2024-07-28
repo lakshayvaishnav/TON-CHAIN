@@ -1,16 +1,26 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import { TonConnectButton } from "@tonconnect/ui-react";
+import { useCounterContract } from "./hooks/useCounterContract";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const { value, address } = useCounterContract();
 
   return (
-    <>
-      <TonConnectButton />
-    </>
+    <div className="App">
+      <div className="Container">
+        <TonConnectButton />
+
+        <div className="Card">
+          <b>Counter Address</b>
+          <div className="Hint">{address?.slice(0, 30) + "..."}</div>
+        </div>
+
+        <div className="Card">
+          <b>Counter Value</b>
+          <div>{value ?? "Loading..."}</div>
+        </div>
+      </div>
+    </div>
   );
 }
 
