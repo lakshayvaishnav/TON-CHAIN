@@ -1,0 +1,16 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "y",
+  "main": "y",
+  "scripts": {
+    "test": "y"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ton-community/assets-sdk": "^0.0.4-beta.4",
+    "@ton-community/gamefi-sdk": "^0.0.3",
+    "boxen": "^8.0.0"
+  }
+}
